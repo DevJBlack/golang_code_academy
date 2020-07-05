@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func fuelGauge(fuel int) {
-	fmt.Println("We have this much fuel left in gallons:", fuel)
+	fmt.Println(" We have this much fuel left in gallons:", fuel)
 }
 
 func calculateFuel(planet string) int {
@@ -37,7 +37,7 @@ func flyToPlanet(planet string, fuel int) int {
 
 	if fuelRemaining >= fuelCost {
 		greetPlanet(planet)
-		fuelCost - fuelRemaining
+		fuelRemaining -= fuelCost
 	}
 	if fuelCost > fuelRemaining {
 		cantFly()
@@ -46,6 +46,12 @@ func flyToPlanet(planet string, fuel int) int {
 }
 
 func main() {
-	flyToPlanet("Mars", 100)
+	var fuel int
+	fuel = 1000000
+
+	planetChoice := "Venus"
+	fuel = flyToPlanet(planetChoice, fuel)
+
+	fuelGauge(fuel)
 
 }
