@@ -29,4 +29,3 @@ func main() {
 
 //Create a function that changes a boolean value from a different scope. Done
 //Create a function that changes a float value from a different scope.
-//Find the zero value of a pointer that is initialized but hasn’t been assigned a value.
